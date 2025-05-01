@@ -1,0 +1,99 @@
+.valores{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#titulo-valores{
+    color: white;
+    font-size: 60px;
+    padding: 0 40px;
+    text-align: center;
+    
+}
+
+.valores h1{
+    font-size: 60px;
+}
+
+
+.Valoresyprincipios{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;   
+    padding: 80px 0;
+    background-color: #191b0c;
+
+    p{
+        font-size: 18px;
+    }
+}
+
+.valores-principios-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.principios2, .valores2{
+    background-color: #191b0c;
+    text-align: center;
+    width: 50%;
+}
+
+.lista-principios{
+    text-align: left;
+    gap: 70px;
+    padding-left: 70px;
+    font-size: 22px;
+}
+
+.lista-principios li{
+}
+
+.valores2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.valores2 .items-valores{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 40px;
+    width: 80%;
+    
+}
+
+.icon-valores{
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .valores-principios-container{       
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .principios2, .valores2{
+        width: 100%;
+    }
+
+    .lista-principios{
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+        font-size: 20px;
+    }
+}

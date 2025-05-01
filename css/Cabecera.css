@@ -1,0 +1,201 @@
+.descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    padding: 5%;
+    padding-top: 80px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.descripcion h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.descripcion p {
+    padding: 20px 20%;
+    text-align: center;
+    font-size: 22px;
+    white-space: normal;
+}
+
+.descripcion img {
+    height: 300px;
+}
+
+.vision-mision {
+    display: flex;
+    text-align: center;
+    color: #fff;
+    padding: 30px 10%;
+    background-color: #BF210D;
+    padding-bottom: 40px;
+}
+
+.vision-mision p{
+    text-align: justify;
+    font-size: 19px;
+    padding: 0 10%;
+}
+
+.vision-mision-icon{
+    height: 200px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .descripcion{
+        gap: 2px;
+    }
+    
+    .descripcion p{
+        font-size: 18px;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .vision-mision{
+        display: block;
+    }
+    
+    .vision-mision p{
+        text-align: justify;
+    }
+}
+
+.objetivos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3B3B98;
+    padding: 0 50px;
+    padding-bottom: 60px;
+}
+
+.objetivos h2 {
+    font-size: 60px;
+    color: #fff;
+}
+ 
+.objetivo-general{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.objetivo-general img{
+    width: 200px;
+}
+
+.objetivo-general p{
+    font-size: 22px;
+    padding: 0 27%;
+    text-align: justify;
+    color: #fff;
+}
+
+.objetivos-especificos h2{
+    text-align: center;
+}
+
+.objetivos-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20%;
+
+}
+
+.item-objetivo{
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.item-objetivo p{
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.icon-objetivo{
+    height: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .objetivo-general{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .objetivo-general p{
+        padding: 0 15%;
+    }
+
+    .item-objetivo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .objetivos-lista{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 1%;
+    
+    }
+
+    .item-objetivo p{
+        text-align: justify;
+    }
+
+    .item-objetivo img{
+        height: 200px;
+        width: 200px;
+    };
+
+}
+
+.principios-div{
+    background-color: #fff;
+}
+
+.pv-div{
+    text-align: center;
+}
+
+.principios-div h2{
+    color: black;
+    font-size: 40px;
+}
+
+.valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.valores h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+#principios{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+
+#nuestrosObjetivo{
+    color: #BF210D;
+}

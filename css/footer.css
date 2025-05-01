@@ -1,0 +1,150 @@
+footer{
+    background-color: #3B3B98;
+    padding: 30px 6%;
+    
+}
+
+footer img{
+    height: 80px;
+    padding-bottom: 20px;
+}
+
+#footer-info{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    padding-bottom: 20px;
+}
+
+#footer-info a {
+    color: #996464;
+    text-decoration: none;
+}
+
+#footer-info h4{
+    font-family: "poppins";
+    width: 70%;
+    font-size: 14px;
+    color: rgb(236, 236, 236);
+}
+
+#footer-info p{
+    font-family: "poppins";
+    font-size: 15px;
+    color: #e4e4e4;
+    font-weight: 500;
+}
+
+#footer-descripcion h4{
+    width: 90%;
+
+}
+
+#download-app{
+    padding-top: 1rem;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#redes{
+    border-bottom: 1px solid #dddddd;
+    text-decoration: none;
+}
+
+#redes-sociales{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+#redes-sociales img{
+    height: 35px;
+    padding: 0;
+}
+
+#redes-sociales a{
+    text-decoration: none;
+}
+
+#redes-sociales a i{
+    font-size: 22px;
+    padding-right: 15px;
+    color: #fff5f5;
+}
+
+#rigth{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* FOOTER RESPONSIVE */
+
+@media (max-width:760px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #footer-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    #footer-info div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    #footer-info h4{
+        width: 200px;
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 30px;
+    }
+
+    #footer-info p{
+        width: 300px;
+        text-align: justify;
+    }
+
+    #footer-descripcion, #contacto, #quienes-somos, #politicas
+    {
+        border-bottom: 1px solid #d4d4d4;
+        width: 100%;
+    }
+
+    #redes{
+        border-bottom: none;
+        padding-bottom: 30px;
+    }
+
+    #rigth{
+        width: 100%;
+    }
+
+    div #redes-sociales{
+        gap: 15px;
+        flex-direction: row;
+    }
+    
+}
+
+#contacto p{
+    font-size: 16px;
+}
