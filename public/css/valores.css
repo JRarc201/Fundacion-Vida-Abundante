@@ -1,0 +1,316 @@
+#titulo-valores{
+    color: white;
+    font-size: 50px;
+    padding: 0 40px;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+}
+
+.Valoresyprincipios{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;   
+    padding: 80px 0;
+    background-color: #D4541C;
+
+    p{
+        font-size: 18px;
+    }
+}
+
+.valores-principios-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+#principios-subtitle{
+    font-family: 'Fraunces', serif;
+    font-size: 28px;  
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#descricion-principios{
+    text-align: center;
+    padding: 0 20%;
+    font-family:'Nunito Sans', sans-serif;
+    color: #f4ebeb;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-bottom: 5px;  
+    padding-top: 5px; 
+}
+
+
+.lista-principios{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px 30px;
+    padding: 0;
+    margin-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.principio-card{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 12px;
+    padding: 13px 37px;
+    border: 2px solid #c0e2fd78;
+    border-radius: 16px;
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+}
+
+.iconPyV i{
+    height: 40px;
+    color: #fff;
+    border-radius: 50%; 
+    background-color: #c0e2fd29;
+    padding: 11px;
+}
+
+.principio-card span{
+    font-size: 20px;
+    font-family:'Nunito Sans', sans-serif;
+    
+}
+
+
+.lista-valores {
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    justify-content: center;
+    gap: 10px 10px;
+    width: 100%;
+    
+}
+
+
+/* Tablets */
+@media (max-width: 1200px) {
+    .lista-valores {
+        grid-template-columns: repeat(4, 200px);
+    }
+}
+
+
+/* Tablets pequeñas */
+@media (max-width: 865px) {
+    .lista-valores {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+
+
+/* Móviles */
+@media (max-width: 650px) {
+    .lista-valores {
+        grid-template-columns: repeat(2, 200px);
+        gap: 15px;
+    }
+}
+
+.valores-card{
+    border: 2px solid #c0e2fd6a;
+    border-radius: 10px;
+    height: 170px;
+    width: 170px;
+    text-align: center;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px; 
+    gap: 5px;
+    margin: 10px; 
+
+}
+
+@media screen and (min-width: 1100px) {
+    .principio-card:hover{
+        transform: translateY(-3px);
+        border: 2px solid #fff;
+        cursor: auto;
+        background-color: #fff;
+        color: #D4541C;
+
+        .iconPyV i{
+            color: #D4541C;
+            background-color: #d4531c1d;
+        }
+    }
+
+    
+
+    .valores-card:hover{
+        transform: translateY(-3px);
+        border: 2px solid #fff;
+        cursor: pointer;
+    }
+}
+
+
+
+.div-img{
+    border: 2px solid #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-valores{
+    height: 40px;
+}
+
+#titulo-valor{
+    margin: 0;
+    font-family: 'Fraunces', serif;
+}
+
+#descripcion-valores{
+    font-size: 13px; 
+    margin: 0;
+    font-family: 'Fraunces', serif;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .valores-principios-container{       
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .principios2, .valores2{
+        width: 100%;
+    }
+}
+
+@media screen and (width > 445px) {
+    h1 #titulo-valores{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    #titulo-valores{
+        font-size: 30px;
+    }
+
+    .principio-card span{
+        font-size: 15px;
+    }
+
+    .principios2 h1, .valores2 h1{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 972px) {
+    .lista-principios{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .principio-card span{
+        font-size: 18px;
+    }
+    
+    .principio-card{ 
+        padding: 10px 22px;  
+    }
+
+    #descricion-principios {
+        text-align: center;
+        padding: 0 10%;
+        font-family: 'Fraunces', serif;
+        color: #f4ebeb;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    #descricion-principios {
+        text-align: center;
+        padding: 0 10%;
+        font-family: 'Fraunces', serif;
+        color: #f4ebeb;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .valores-card {
+        justify-self: center;
+    }
+
+    .valores-card {
+        border: 2px solid #fff;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 5px;
+        margin: 10px;
+    }
+    
+    .div-img {
+        border: 2px solid #fff;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        margin: 0 auto 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .icon-valores {
+        height: 100px;
+    }
+    
+    #titulo-valor {
+        margin: 0;
+        font-family: 'Fraunces', serif;
+        font-size: 26px;
+    }
+    
+    #descripcion-valores {
+        font-size: 15px;
+        margin: 0;
+        font-family: 'Fraunces', serif;
+    }
+    
+}

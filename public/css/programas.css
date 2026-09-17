@@ -1,0 +1,193 @@
+/* RESET & ESTILOS BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* CONTENEDOR PRINCIPAL (DOS COLUMNAS) */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+@media (min-width: 980px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* COLUMNA IZQUIERDA: CARRUSEL */
+.carousel-column {
+    padding: 2rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .carousel-column {
+        border-bottom: none;
+        border-right: 1px solid #e5e7eb;
+    }
+}
+
+/* VISTA DE IMAGEN PRINCIPAL (MÁSCARA DE RECORTE) */
+.main-image-viewport {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* CONTENEDOR DESLIZANTE DE IMÁGENES */
+.slider-track {
+    display: flex;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Transición suave hacia la izquierda */
+}
+
+.slider-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Galería de Miniaturas para Seleccionar */
+.thumbnails-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 3px 3px;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    padding-top: 5px;
+    padding-left: 3px;
+}
+
+.thumb {
+    width: 80px;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.thumb:hover {
+    opacity: 0.9;
+}
+
+.thumb.active {
+    opacity: 1;
+    border-color: #5555ff;
+    transform: scale(1.05);
+}
+
+/* COLUMNA DERECHA: INFORMACIÓN */
+.info-column {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: #e0e7ff;
+    color: #5555ff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.info-column h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #304090;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-family: 'Fraunces', serif;
+}
+
+.info-column p {
+    color: #4b5563;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.btn-action {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 1rem;
+    background-color: #5555ff;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-action:hover {
+    background-color: #4040e0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .thumbnails-container {
+        grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(65px, 1fr));
+    }
+
+    .thumb {
+        width: 65px; 
+    }
+}
+
+@media screen and (max-width: 5900px) {
+    .thumbnails-container {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    }
+
+    .thumb {
+        width: 50px; 
+    }
+}

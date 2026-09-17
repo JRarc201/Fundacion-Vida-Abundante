@@ -1,0 +1,202 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1px;
+    color: white;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    outline: 2px solid #504f4f87;
+    
+
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-inline-start: 0px;
+    padding-right: 70px; 
+    align-items: center;
+
+    
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    &:hover{
+        color: #3B3B98;
+    }
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+    padding: 30px;
+}
+
+#icon{
+    height: 60px;
+    padding: 14px 70px; 
+}
+
+.contact-icon{
+    height: 13px;
+    padding: 0 6px 0 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 1144px) {
+    .nav-links {
+        display: none; 
+        border-top: 2px solid #3B3B98;
+        border-bottom: 2px solid #3B3B98;
+        padding: 0;  
+        border-radius: 2px;
+        align-items: center; 
+        flex-direction: column;
+        position: absolute;
+        background: #ffffff;
+        top: 78px;
+        right: 0px;
+        width: 100%; 
+        gap: 0;
+    }
+
+    .nav-links a{
+        font-size: 25px; 
+        padding: 30px 0; 
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #3B3B98; 
+
+    }
+
+
+    #botonDonarSobre a{
+        font-size: 16px; 
+        margin: 25px 0;  
+        
+    }
+
+    #icon{
+        height: 60px;
+        padding: 14px 40px; 
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+    
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.317);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 5;
+}
+
+.menu-overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+/* --- Icono de 3 barras (reemplaza al &#9776) --- */
+.menu-toggle {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 30px;
+    height: 24px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 90%;
+    height: 3px;
+    background-color: #9f3507; 
+    border-radius: 2px;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* Cuando el menú está abierto -> se transforma en X */
+.menu-toggle.active .bar1 {
+    transform: translateY(9px) rotate(45deg);
+}
+.menu-toggle.active .bar2 {
+    opacity: 0;
+}
+.menu-toggle.active .bar3 {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* --- Animación de los links desprendiéndose desde arriba --- */
+@media screen and (max-width: 1144px) {
+    .nav-links > a,
+    .nav-links > #botonDonarSobre {
+        opacity: 0;
+        transform: translateY(-25px);
+        transition: transform 0.35s ease, opacity 0.25s ease;
+    }
+
+    /* antes: .nav-links.active > a  -> ahora usamos .open */
+    .nav-links.open > a:nth-child(1) { transition-delay: 0.05s; }
+    .nav-links.open > a:nth-child(2) { transition-delay: 0.1s; }
+    .nav-links.open > a:nth-child(3) { transition-delay: 0.15s; }
+    .nav-links.open > a:nth-child(4) { transition-delay: 0.2s; }
+    .nav-links.open > a:nth-child(5) { transition-delay: 0.25s; }
+    .nav-links.open > #botonDonarSobre { transition-delay: 0.3s; }
+
+    .nav-links.open > a,
+    .nav-links.open > #botonDonarSobre {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

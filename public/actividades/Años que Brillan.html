@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Vida Abundante</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+   <link
+        href="https://fonts.googleapis.com/css2?family=Allerta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Nunito+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/carrucel.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/Cabecera.css">
+    <link rel="stylesheet" href="../css/valores.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/actividades.css">
+    <link rel="stylesheet" href="../css/programas.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html"> <div class="logo"> <img id="icon" src="../images/lateral 3.png" style="height: 88px;"  alt="">
+        </div></a>
+       
+        <ul class="nav-links">
+            
+            <a href="../index.html">Ir al Inicio</a>
+            <div id="botonDonarSobre">
+                <span>
+                    <a href="" style="width: 175px;">Quiero donar <img src="../images/heart2.png" alt="" height="30px" style="
+    font-family: 'Nunito Sans', sans-serif;"></a>
+                </span>
+            </div>
+        </ul>
+        <div class="menu-toggle">&#9776</div>
+    </nav>
+    <div class="container">
+        
+        <!-- LADO IZQUIERDO: CARRUSEL -->
+        <div class="carousel-column">
+            <!-- Ventana visible que recorta el deslizador -->
+            <div class="main-image-viewport">
+                <!-- Pista que desplaza las imágenes hacia la izquierda -->
+                <div id="sliderTrack" class="slider-track">
+                    <img src="../images/fotos/Programa de Ancianos/i5.png" alt="Foto 1">
+                    <img src="../images/fotos/Programa de Ancianos/i1.png" alt="Foto 2">
+                    <img src="../images/fotos/Programa de Ancianos/i2.png" alt="Foto 3">
+                    <img src="../images/fotos/Programa de Ancianos/i3.png" alt="Foto 4">
+                    <img src="../images/fotos/Programa de Ancianos/i4.png" alt="Foto 5">
+                    <img src="../images/fotos/Programa de Ancianos/i6.png" alt="Foto 6">
+                    <img src="../images/fotos/Programa de Ancianos/i7.png" alt="Foto 7">
+                </div>
+            </div>
+
+            <!-- Lista de miniaturas para seleccionar -->
+            <div class="thumbnails-container">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i5.png" alt="Foto 1" onclick="manualSelect(0)">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i1.png" alt="Foto 1" onclick="manualSelect(1)">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i2.png" alt="Foto 1" onclick="manualSelect(2)">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i3.png" alt="Foto 1" onclick="manualSelect(3)">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i4.png" alt="Foto 1" onclick="manualSelect(4)">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i6.png" alt="Foto 1" onclick="manualSelect(5)">
+                <img class="thumb active" src="../images/fotos/Programa de Ancianos/i7.png" alt="Foto 1" onclick="manualSelect(6)">
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: INFORMACIÓN -->
+        <div class="info-column">
+            <span class="badge">CONOCE NUESTROS PROGRAMAS</span>
+            <h1>Años que Brillan</h1>
+            <p>
+                Valoramos la experiencia y el legado de nuestros adultos mayores, promoviendo espacios donde puedan sentirse acompañados, activos y reconocidos.
+            </p>
+            <p>
+                A través de este programa realizamos:
+            </p>
+            <p>
+                ⇝ Actividades recreativas y de integración.<br>
+                ⇝ Jornadas de bienestar y promoción de la salud.<br>
+                ⇝ Acompañamiento emocional y social.<br>
+                ⇝ Talleres formativos y ocupacionales.<br>
+                ⇝ Celebraciones y encuentros para fortalecer su participación y calidad de vida.<br>
+                
+                <p style="color: #FFFFFF;"></p><br><p style="color: #FFFFFF;"></p><br>
+            </p>
+        </div>
+
+    </div>
+    <script>
+        const INTERVAL_TIME = 8000; // 8 segundos
+        let currentIndex = 0;
+        let autoSlideTimer = null;
+
+        const sliderTrack = document.getElementById('sliderTrack');
+        const thumbnails = document.querySelectorAll('.thumb');
+
+        // Mueve la pista hacia la izquierda según el índice
+        function showImage(index) {
+            currentIndex = index;
+            
+            // Aplica el desplazamiento horizontal (-100%, -200%, etc.)
+            sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Actualiza la clase 'active' en las miniaturas
+            thumbnails.forEach((thumb, i) => {
+                if (i === currentIndex) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+
+        // Avanza a la siguiente imagen
+        function nextImage() {
+            let nextIndex = (currentIndex + 1) % thumbnails.length;
+            showImage(nextIndex);
+        }
+
+        // Inicia o reinicia el temporizador de 8 segundos
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideTimer = setInterval(nextImage, INTERVAL_TIME);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideTimer) {
+                clearInterval(autoSlideTimer);
+            }
+        }
+
+        // Cuando el usuario hace clic en una foto manualmente
+        function manualSelect(index) {
+            showImage(index);
+            startAutoSlide(); // Reinicia el contador de 8 segundos desde cero
+        }
+
+        // Arrancar el carrusel al cargar la página
+        startAutoSlide();
+    </script>
+</body>

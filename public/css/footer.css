@@ -1,0 +1,211 @@
+footer{
+    background-color: #282828;
+    padding: 50px 10% 30px 10%;
+}
+
+footer img{
+    height: 80px;
+    padding-bottom: 20px; 
+}
+
+#footer-info{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    padding-bottom: 20px;
+}
+
+#footer-info a {
+    color: #996464;
+    text-decoration: none;
+}
+
+#footer-info h4{
+    font-family: "poppins";
+    width: 70%;
+    font-size: 35px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+#footer-info p{
+    font-family: "poppins";
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+#footer-descripcion h4{
+    width: 90%;margin: 0;
+
+
+}
+
+#download-app{
+    padding-top: 1rem;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#redes-footer{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    gap: 10px;
+
+}
+
+#redes-footer i{
+    font-size: 30px;
+    color: white;
+    padding: 14px;
+    border-radius: 50%;
+
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.204);
+    }
+}
+
+#redes{
+    text-decoration: none;
+}
+
+#redes-sociales{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#redes-sociales img{
+    height: 35px;
+    padding: 0;
+}
+
+#redes-sociales a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#redes-sociales a h5{
+    margin: 0;
+}
+#redes-sociales a i{
+    font-size: 22px;
+    padding-right: 15px;
+    color: #fff5f5;
+}
+
+#rigth{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+#rigth p{
+    font-size: 16px;
+    font-weight: 300px;
+}
+
+/* FOOTER RESPONSIVE */
+
+@media (max-width:760px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #footer-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    #footer-info div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    #footer-info h4{
+        width: 200px;
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    #footer-info p{
+        width: 300px;
+        text-align: center;
+    }
+
+    #footer-descripcion, #contacto, #quienes-somos, #politicas
+    {
+        border-bottom: 1px solid #d4d4d4;
+        width: 100%;
+    }
+
+    #redes{
+        border-bottom: none;
+        padding-bottom: 30px;
+    }
+
+    #rigth{
+        width: 100%;
+    }
+
+    div #redes-sociales{
+        gap: 35px;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    #redes-sociales a{
+        font-size: 30px;
+    }
+
+    #redes-sociales img{
+        height: 60px;
+    }
+
+    #footer-descripcion p{
+        font-size: 16px;
+        margin: 0;
+    }
+
+    #politicas p{
+        font-size: 17px;
+    }
+
+    
+    #redes-footer{
+        width: auto;
+        gap: 3px;
+    }
+}
+
+#contacto p{
+    font-size: 16px;
+}

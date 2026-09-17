@@ -1,0 +1,305 @@
+.descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    padding-top: 80px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.descripcion h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    color: #2A2A8F;
+    font-family: 'Fraunces', serif;
+}
+
+.descripcion p {
+    padding: 20px 20%;
+    text-align: center;
+    font-size: 22px;
+    white-space: normal;
+    font-family:'Nunito Sans', sans-serif;
+}
+
+.descripcion img {
+    height: 300px;
+}
+
+iframe{
+    width: 90%;
+    height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .descripcion{
+        gap: 2px;
+    }
+    
+    .descripcion p{
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+        padding: 20px 6%;
+    }
+    
+}
+
+.objetivos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3B3B98;
+    padding: 0 50px;
+    padding-bottom: 60px;
+}
+
+.objetivos h2 {
+    font-size: 60px;
+    color: #fff;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+ 
+.objetivo-general{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.objetivo-general img{
+    width: 200px;
+}
+
+.objetivo-general p{
+    font-size: 20px;
+    padding: 0 27%;
+    text-align: center;
+    font-family:'Nunito Sans', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+.objetivos-especificos h2{
+    text-align: center;
+}
+
+.objetivos-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20%;
+
+}
+
+.item-objetivo{
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.item-objetivo p{
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    font-family:'Nunito Sans', sans-serif;
+}
+
+.icon-objetivo{
+    height: 80px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .objetivo-general{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .objetivo-general p{
+        padding: 0 5%;
+    }
+
+    .item-objetivo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .objetivos-lista{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 1%;
+    
+    }
+
+    .item-objetivo p{
+        text-align: center;
+        width: 120%;
+    }
+
+    .item-objetivo img{
+        height: 200px;
+        width: 200px;
+    };
+
+}
+
+.principios-div{
+    background-color: #fff;
+}
+
+.pv-div{
+    text-align: center;
+}
+
+.principios-div h2{
+    color: black;
+    font-size: 40px;
+}
+
+.valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.valores h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+#principios{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+
+#nuestrosObjetivo{
+    margin: 0;
+    padding: 30px;
+}
+
+#redes{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    outline: none;
+    padding-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+}
+
+.divRed{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 7px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    transition-duration: 500ms;
+}
+
+#iconred{
+    height: 60px;
+    transition-duration: 100ms;
+}
+
+#Facebook{
+    transition-duration: 300ms;
+    border-radius: 15px;
+
+    &:hover{
+        outline: 2px solid #1877F2;
+        border-radius: 30px;
+        background-color: #1876f249;
+    }
+}
+
+#Instagram{
+    transition-duration: 300ms;
+    border-radius: 15px;
+    &:hover{
+        outline: 2px solid #C20097;
+        border-radius: 35px;
+        background-color: #c2009849;
+    }
+}
+
+#TikTok{
+    transition-duration: 300ms;
+    border-radius: 15px;
+        &:hover{
+            outline: 2px solid #24F6FA;
+            border-radius: 35px;
+            background-color: #24f6fa49;
+    }
+}
+
+#Youtube{
+    transition-duration: 300ms;
+    border-radius: 15px;
+        &:hover{
+            outline: 2px solid #FF0000;
+            border-radius: 35px;
+            background-color: #ff000049;
+    }
+}
+
+
+@media screen and (max-width: 1094px) {
+    #redes{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 921px) {
+    #redes{
+        display: grid;
+        grid-template-columns: 200px 200px;
+    }
+
+    #Facebook{
+        outline: 2px solid #1877F2;
+        border-radius: 35px;
+    }
+
+    #Instagram{
+        outline: 2px solid #C20097;
+        border-radius: 35px;
+    }
+
+    #TikTok{
+        outline: 2px solid #24F6FA;
+        border-radius: 35px;
+    }
+
+    #Youtube{
+        outline: 2px solid #FF0000;
+        border-radius: 35px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    #redes{
+        display: grid;
+        grid-template-columns: 200px;
+        gap: 20px;
+    }
+
+    .descripcion h1, #nuestrosObjetivos, .objetivos-especificos h2{
+        font-size: 30px;
+    }
+}

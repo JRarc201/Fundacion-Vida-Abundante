@@ -1,0 +1,116 @@
+.vision-mision-title{
+    background-color: #D4541C;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.vision-mision-title h1{
+    font-size: 50px;
+    color: white;
+    padding: 0 30px;
+    padding-top: 30px;
+    margin-bottom: 0;
+    font-family: 'Fraunces', serif;
+}
+
+.vision-mision-title p{
+    margin-top: 10px;
+    color: white;
+    font-size: 22px;
+    padding: 0 30px;
+    padding-bottom: 30px;
+    font-family:'Nunito Sans', sans-serif;
+}
+
+.vision-mision-info{
+    padding: 30px 12%;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.vision-mision-div{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+
+.vision-mision-info img{
+    max-width: 46%;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.vision-mision-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+    gap: 10px;
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: #e0e7ff;
+    color: #5555ff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1.3rem;
+    margin-bottom: .5rem;
+    font-family:'Nunito Sans', sans-serif;
+}
+
+.vision-mision-text h2{
+    font-size: 35px;
+    margin: 0;
+}
+
+.vision-mision-text p{
+    font-size:1.1rem;
+    line-height:1.8;
+    font-family:'Montserrat',sans-serif;
+}
+
+
+@media screen and (max-width: 1306px){
+    .vision-mision-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vision-mision-info img{
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+    .vision-mision-text{
+        padding-left: 0;
+    }
+
+    .vision-mision-text p{
+        font-size: 19px;
+    }
+
+    .vision-mision-text h2{
+        font-size: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 445px) {
+    .vision-mision-title h1{
+        font-size: 30px;
+    }
+
+    .vision-mision-title p{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 18px;
+    }
+}

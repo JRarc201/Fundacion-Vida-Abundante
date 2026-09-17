@@ -1,0 +1,217 @@
+#donaciones-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 110px; 
+    padding-bottom: 100px;
+    gap: 10%;
+}
+
+#donaciones-info{
+    width: 400px;
+}
+
+#donaciones-info small{
+    font-size: 15px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    color: #2F4090;
+    padding-bottom: 10px;
+} 
+
+#donaciones-info h2{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    line-height: 0.9;
+    color: #D4541C;
+    padding-bottom: 15px;
+    width: 500px; 
+}
+
+#donaciones-info p{
+    margin: 0;
+    padding: 0;
+    width: 420px; 
+    font-family: 'Nunito Sans', sans-serif;
+    padding-bottom: 30px;
+}
+
+#donaciones-cuenta{
+    border: 2px solid #1C2B2D;
+    border-radius: 30px;
+    padding: 20px 20px;
+    width: 400px; 
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 6px 0px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 7px 8px 0px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 7px 8px 0px 0px rgba(0,0,0,0.4);
+}
+
+#targeta{ 
+    font-size: 24px;
+    color: #2F4090; 
+    padding: 20px;
+    background-color: #2f419023; 
+    border-radius: 50%;
+}
+
+#donaciones-cuenta h2{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#bancolombia{
+    height: 80px;
+    padding: 50px 0;
+    border: 2px dashed #1c2b2d1f; 
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+#cuenta-info{
+    margin: 10px 22px;
+    padding: 13px 20px;
+    background-color: #f3e9e186;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#cuenta-info div{
+    padding: 4px;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.text-cuenta{
+    font-weight: 300; 
+}
+
+#numero-cuenta{
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 800;
+}
+
+.title {
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #2F4090;
+}
+
+#copyBtn {
+    padding: 10px 18px;
+    width: 340px;
+    height: 50px;
+    border-radius: 100px;
+    border: 2px solid #1c2b2d;
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+#copiar{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#copyBtn:hover {
+    background: #e9652c; 
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 3px 5px 0 #1c2b2d;
+}
+
+#copyBtn.copied {
+    background: #3e7c59;
+    color: #fffdf8;
+    border-color: #3e7c59;
+}
+
+@media (max-width: 1006px) {
+    #donaciones-info h2{
+        font-size: 50px;
+    }
+
+    #donaciones-container {
+        gap: 30px;
+    }
+
+    #donaciones-cuenta #donaciones-info{
+        width: auto;
+    }
+}
+
+
+@media (max-width: 905px) {
+    #donaciones-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #donaciones-container{
+        padding-top: 200px; 
+    }
+}
+
+@media (max-width: 622px) {
+    #donaciones-container{
+        padding-top: 120px;
+    }
+
+    #donaciones-info h2{
+        font-size: 36px;
+        width: 380px; 
+    }
+}
+
+@media (max-width: 475px){
+    #donaciones-cuenta{
+        width: 80%; 
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    #cuenta-info div{
+        gap: 10px;
+    }
+
+    #donaciones-info{
+        width: 84%; 
+    }
+
+    #donaciones-info h2{
+        width: 94%;
+    } 
+
+    #donaciones-info p{
+        width: 94%;
+        
+    } 
+
+    #donaciones-cuenta p{
+        text-align: center;
+    }
+
+    #bancolombia{
+        width: 100%; 
+        height: auto;
+    }
+
+    #copyBtn{ 
+        width: 94%; 
+    }
+
+    #cuenta-info{
+        margin: 0; 
+    }
+} 
